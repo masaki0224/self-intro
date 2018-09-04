@@ -1,0 +1,113 @@
+header.header#header
+  .header-wrapper
+    h1.header-title
+        | Introduction
+    .header-list-wrapper.hidden-on-sp
+      ul.social-btn.flex
+        li.social-btn__menu
+          a href=""
+            i.fab.fa-instagram
+        li.social-btn__menu
+          a href=""
+            i.fab.fa-facebook-f
+      ul.header-list-nav.flex
+        li.header-list-nav__menu
+          a href="#home" Home
+        li.header-list-nav__menu
+          a href="#about" About
+        li.header-list-nav__menu
+          a href="#work" Work
+        li.header-list-nav__menu
+          a href="#blog" Blog
+
+    .sp-header-list-wrapper.hidden-on-pc
+      ul.sp-header-list-nav.flex
+        li.sp-header-list-nav__menu
+          a href="#home" Home
+        li.sp-header-list-nav__menu
+          a href="#about" About
+        li.sp-header-list-nav__menu
+          a href="#work" Work
+        li.sp-header-list-nav__menu
+          a href="#blog" Blog
+      ul.sp-social-btn.flex
+        li.sp-social-btn__menu
+          a href=""
+            i.fab.fa-instagram
+        li.sp-social-btn__menu
+          a href=""
+            i.fab.fa-facebook-f
+
+section.home
+  .home__image
+    =image_tag 'image02.jpg'
+
+section.service
+  h2.title
+    | Service
+  ul.service-list.flex
+    li.service-list-menu
+      h3.service-list-menu__title
+        |コーディング
+      h4.service-list-menu__subtitle
+        | CODING
+      .service-list-menu__img
+        i.fas.fa-code-branch
+      p.service-list-menu__text
+        |デザインの意図を理解し、動きや効果を適切に使用することでWebサイトの仕上がりは大きく変わります。スマートフォンサイト、ワードプレスを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイトなど、様々なサイトのコーディングを行っております。
+    li.service-list-menu
+      h3.service-list-menu__title
+        |ディレクション
+      h4.service-list-menu__subtitle
+        | DIRECTION
+      .service-list-menu__img
+        i.fas.fa-pencil-alt
+      p.service-list-menu__text
+        |お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
+
+section.work
+  h2.title
+    | Works
+  ul.work-list.flex
+    li.work-list__menu
+      a href="#"
+        img src="https://s3.ap-northeast-1.amazonaws.com/i-repo/element/82b26402-e7e8-4e6d-814d-ecee2131ba84.jpg"
+    li.work-list__menu
+      a href="#"
+        img src="https://i.pinimg.com/736x/a9/d5/86/a9d586e3941399bd7e10227f063a5220--sexy-hair-pretty-woman.jpg"
+    li.work-list__menu
+      a href="#"
+        img src="http://jiyuubito21102.com/wp-content/uploads/2018/05/hamabeminami.jpg.pagespeed.ce.ZL7xHaOTtB.jpg"
+
+section.blog
+  h2.title
+    | Blog
+  ul.blog-list.flex
+    li.blog-list__menu
+      a href=""
+        img src="https://www.pakutaso.com/shared/img/thumb/elly20160701265118_TP_V.jpg"
+    li.blog-list__menu
+      a href=""
+        img src="http://www.stockphotos.jp/wp-content/uploads/2017/01/DSC1531e.jpg"
+    li.blog-list__menu
+      a href=""
+        img src="https://world-web-magazine.com/wp-content/uploads/2017/11/netherland-1-860x573.jpg"
+
+.toTop
+  a href="#header"
+    i.fas.fa-caret-up
+
+
+footer.footer
+  .footer-wrapper.flex
+    ul.footer-list.flex
+      li.footer-list__menu
+        a href="#home" Home
+      li.footer-list__menu
+        a href="#about" About
+      li.footer-list__menu
+        a href="#work" Work
+      li.footer-list__menu
+        a href="#blog" Blog
+    .copyright
+      | Self Introduction

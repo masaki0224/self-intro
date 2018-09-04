@@ -1,0 +1,354 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+html {
+  -webkit-appearance: none;
+}
+body {
+  line-height: 1;
+  -webkit-appearance: none;
+  font-size: 0.75rem;
+  font-family: 'Lato', sans-serif;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td, th {
+  padding: 0;
+}
+input, select {
+  display: block;
+  border: none;
+  background-color: inherit;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+a:-webkit-any-link {
+  color: inherit;
+}
+$tablet-width: 768px;
+
+/*============================================================
+    common
+=============================================================*/
+.flex{
+  display: flex;
+}
+.title{
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+.hidden-on-pc{
+  display: none;
+  @media screen and (max-width: $tablet-width){
+    display: block;
+  }
+}
+.hidden-on-sp{
+  display: block;
+  @media screen and (max-width: $tablet-width){
+    display: none;
+  }
+}
+/*============================================================
+    header
+=============================================================*/
+.header-wrapper{
+  width: 100%;
+  display: flex;
+  @media screen and (max-width: $tablet-width){
+    display: block;
+  }
+}
+
+.header{
+  padding: 100px;
+  padding-bottom: 50px;
+  max-width: 800px;
+  @media screen and (max-width: $tablet-width){
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  &-title{
+    font-size: 50px;
+    letter-spacing: 3px;
+    font-weight: 300;
+    @media screen and (max-width: $tablet-width){
+      font-size: 20px;
+      padding: 20px;
+    }
+  }
+}
+.header-list-wrapper{
+  margin-left: auto;
+}
+.social-btn{
+  font-size: 25px;
+  margin-bottom: 75px;
+  justify-content: flex-end;
+  &__menu{
+    padding-right: 40px;
+  }
+  &__menu:last-child{
+    padding-right: 0;
+  }
+}
+.header-list-nav{
+  font-size: 17px;
+  &__menu{
+    padding-right: 40px;
+  }
+  &__menu:last-child{
+    padding-right: 0;
+  }
+}
+.sp-header-list-nav{
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  &__menu{
+    width: 50%;
+    box-sizing: border-box;
+    border: solid 1px #6f6f6f;
+    padding: 15px;
+    text-align: center;
+  }
+}
+.sp-social-btn{
+  justify-content: center;
+  font-size: 20px;
+  &__menu{
+    padding-right: 15px;
+  }
+}
+/*============================================================
+    home
+=============================================================*/
+.home{
+  position: relative;
+  margin-bottom: 75px;
+  height: 500px;
+  overflow: hidden;
+  @media screen and (max-width: $tablet-width){
+    margin-bottom: 0px;
+    height: 300px;
+  }
+  &__image{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+  }
+  img{
+    width: 100%;
+  }
+  @media screen and (max-width: $tablet-width){
+    .home{
+      margin-bottom: 0px;
+      height: 200px;
+      overflow: auto;
+    }
+  }
+}
+/*============================================================
+    service
+=============================================================*/
+.service{
+  max-width: 1000px;
+  margin-bottom: 75px;
+  .flex {
+    @media screen and (max-width: $tablet-width){
+      display: block;
+    }
+  }
+}
+.service-list-menu{
+  width: 50%;
+  @media screen and (max-width: $tablet-width){
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &__title{
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__subtitle{
+    font-size: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #6f6f6f;
+  }
+  &__img{
+    font-size: 75px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__text{
+    font-size: 14px;
+    max-width: 300px;
+    margin: 0 auto;
+    letter-spacing: 3px;
+    line-height: 2;
+  }
+}
+
+/*============================================================
+    works
+=============================================================*/
+
+.work{
+  max-width: 1000px;
+  margin-bottom: 75px;
+  .flex{
+    @media screen and (max-width: $tablet-width){
+      display: block;
+    }
+  }
+}
+.work-list{
+  margin: 25px;
+  &__menu{
+    width: 33.33%;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    @media screen and (max-width: $tablet-width){
+      width: 100%;
+    }
+    img{
+      position: absolute;
+      top: 70%;
+      left: 70%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}
+/*============================================================
+    blog
+=============================================================*/
+
+.blog{
+  max-width: 1000px;
+  margin-bottom: 75px;
+  @media screen and (max-width: $tablet-width){
+    margin-bottom: 50px;
+  }
+  .flex{
+    @media screen and (max-width: $tablet-width){
+      display: block;
+    }
+  }
+}
+.blog-list{
+  &__menu{
+    width: 33.33%;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    @media screen and (max-width: $tablet-width){
+      width: 100%;
+    }
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}
+
+/*============================================================
+    toTop
+=============================================================*/
+.toTop{
+  text-align: center;
+  font-size: 50px;
+  max-width: 1000px;
+  &:hover{
+    color: #6f6f6f;
+  }
+  @media screen and (max-width: $tablet-width){
+    margin-bottom: 50px;
+  }
+}
+
+/*============================================================
+    footer
+=============================================================*/
+.footer{
+  max-width: 800px;
+  padding: 150px;
+  margin-bottom: 50px;
+  @media screen and (max-width: $tablet-width){
+    padding: 0;
+  }
+}
+.footer-list{
+  font-size: 17px;
+  @media screen and (max-width: $tablet-width){
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  &__menu{
+    padding-right: 40px;
+    @media screen and (max-width: $tablet-width){
+      width: 50%;
+      box-sizing: border-box;
+      border: solid 1px #6f6f6f;
+      padding: 15px;
+      text-align: center;
+    }
+  }
+}
+.copyright{
+  align-items: center;
+  margin-left: auto;
+  @media screen and (max-width: $tablet-width){
+    text-align: center;
+  }
+}
+@media screen and (max-width: $tablet-width){
+  .footer-wrapper.flex{
+    display: block;
+  }
+}
