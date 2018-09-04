@@ -1,0 +1,496 @@
+/* line 1, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 22, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 26, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+html {
+  -webkit-appearance: none;
+}
+
+/* line 29, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+body {
+  line-height: 1;
+  -webkit-appearance: none;
+  font-size: 0.75rem;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 35, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 38, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 46, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 50, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+td, th {
+  padding: 0;
+}
+
+/* line 53, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+input, select {
+  display: block;
+  border: none;
+  background-color: inherit;
+}
+
+/* line 58, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+a {
+  display: block;
+  text-decoration: none;
+}
+
+/* line 62, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+a:-webkit-any-link {
+  color: inherit;
+}
+
+/*============================================================
+    common
+=============================================================*/
+/* line 70, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.flex {
+  display: flex;
+}
+
+/* line 73, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.title {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+/* line 80, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.hidden-on-pc {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  /* line 80, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .hidden-on-pc {
+    display: block;
+  }
+}
+
+/* line 86, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.hidden-on-sp {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  /* line 86, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .hidden-on-sp {
+    display: none;
+  }
+}
+
+/*============================================================
+    header
+=============================================================*/
+/* line 95, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.header-wrapper {
+  width: 100%;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  /* line 95, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .header-wrapper {
+    display: block;
+  }
+}
+
+/* line 103, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.header {
+  padding: 100px;
+  padding-bottom: 50px;
+  max-width: 800px;
+}
+@media screen and (max-width: 768px) {
+  /* line 103, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .header {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}
+/* line 111, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.header-title {
+  font-size: 50px;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  /* line 111, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .header-title {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+
+/* line 121, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.header-list-wrapper {
+  margin-left: auto;
+}
+
+/* line 124, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.social-btn {
+  font-size: 25px;
+  margin-bottom: 75px;
+  justify-content: flex-end;
+}
+/* line 128, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.social-btn__menu {
+  padding-right: 40px;
+}
+/* line 131, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.social-btn__menu:last-child {
+  padding-right: 0;
+}
+
+/* line 135, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.header-list-nav {
+  font-size: 17px;
+}
+/* line 137, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.header-list-nav__menu {
+  padding-right: 40px;
+}
+/* line 140, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.header-list-nav__menu:last-child {
+  padding-right: 0;
+}
+
+/* line 144, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.sp-header-list-nav {
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+/* line 147, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.sp-header-list-nav__menu {
+  width: 50%;
+  box-sizing: border-box;
+  border: solid 1px #6f6f6f;
+  padding: 15px;
+  text-align: center;
+}
+
+/* line 155, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.sp-social-btn {
+  justify-content: center;
+  font-size: 20px;
+}
+/* line 158, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.sp-social-btn__menu {
+  padding-right: 15px;
+}
+
+/*============================================================
+    home
+=============================================================*/
+/* line 165, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.home {
+  position: relative;
+  margin-bottom: 75px;
+  height: 500px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  /* line 165, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .home {
+    margin-bottom: 0px;
+    height: 300px;
+  }
+}
+/* line 174, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.home__image {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+/* line 181, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.home img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  /* line 185, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .home .home {
+    margin-bottom: 0px;
+    height: 200px;
+    overflow: auto;
+  }
+}
+
+/*============================================================
+    service
+=============================================================*/
+/* line 195, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.service {
+  max-width: 1000px;
+  margin-bottom: 75px;
+}
+@media screen and (max-width: 768px) {
+  /* line 198, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .service .flex {
+    display: block;
+  }
+}
+
+/* line 204, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.service-list-menu {
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  /* line 204, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .service-list-menu {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+/* line 210, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.service-list-menu__title {
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* line 215, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.service-list-menu__subtitle {
+  font-size: 15px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #6f6f6f;
+}
+/* line 221, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.service-list-menu__img {
+  font-size: 75px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* line 226, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.service-list-menu__text {
+  font-size: 14px;
+  max-width: 300px;
+  margin: 0 auto;
+  letter-spacing: 3px;
+  line-height: 2;
+}
+
+/*============================================================
+    works
+=============================================================*/
+/* line 239, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.work {
+  max-width: 1000px;
+  margin-bottom: 75px;
+}
+@media screen and (max-width: 768px) {
+  /* line 242, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .work .flex {
+    display: block;
+  }
+}
+
+/* line 248, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.work-list {
+  margin: 25px;
+}
+/* line 250, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.work-list__menu {
+  width: 33.33%;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  /* line 250, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .work-list__menu {
+    width: 100%;
+  }
+}
+/* line 258, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.work-list__menu img {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+/*============================================================
+    blog
+=============================================================*/
+/* line 270, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.blog {
+  max-width: 1000px;
+  margin-bottom: 75px;
+}
+@media screen and (max-width: 768px) {
+  /* line 270, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .blog {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 276, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .blog .flex {
+    display: block;
+  }
+}
+
+/* line 283, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.blog-list__menu {
+  width: 33.33%;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  /* line 283, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .blog-list__menu {
+    width: 100%;
+  }
+}
+/* line 291, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.blog-list__menu img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*============================================================
+    toTop
+=============================================================*/
+/* line 303, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.toTop {
+  text-align: center;
+  font-size: 50px;
+  max-width: 1000px;
+}
+/* line 307, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.toTop:hover {
+  color: #6f6f6f;
+}
+@media screen and (max-width: 768px) {
+  /* line 303, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .toTop {
+    margin-bottom: 50px;
+  }
+}
+
+/*============================================================
+    footer
+=============================================================*/
+/* line 318, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.footer {
+  max-width: 800px;
+  padding: 150px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  /* line 318, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .footer {
+    padding: 0;
+  }
+}
+
+/* line 326, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.footer-list {
+  font-size: 17px;
+}
+@media screen and (max-width: 768px) {
+  /* line 326, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .footer-list {
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+}
+/* line 332, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.footer-list__menu {
+  padding-right: 40px;
+}
+@media screen and (max-width: 768px) {
+  /* line 332, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .footer-list__menu {
+    width: 50%;
+    box-sizing: border-box;
+    border: solid 1px #6f6f6f;
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+/* line 343, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+.copyright {
+  align-items: center;
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  /* line 343, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .copyright {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 351, /Users/kusakamasaki/projects/self-introduction/app/assets/stylesheets/introduction.scss */
+  .footer-wrapper.flex {
+    display: block;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
