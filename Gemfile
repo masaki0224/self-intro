@@ -58,6 +58,3 @@ gem 'slim-rails', '3.1.3'
 group :production do
   gem 'rails_12factor'
 end
-
-gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: :production
