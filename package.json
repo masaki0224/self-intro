@@ -1,5 +1,10 @@
 {
   "name": "self-introduction",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/masaki0224/self-intro.git",
+  "author": "Masaki <m.k.0224@icloud.com>",
+  "license": "MIT"
 }
