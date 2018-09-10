@@ -5,20 +5,20 @@ header.header#header
     .header-list-wrapper.hidden-on-sp
       ul.social-btn.flex
         li.social-btn__menu
-          a href=""
+          a href="https://www.instagram.com/m.k.224/?hl=ja"
             i.fab.fa-instagram
         li.social-btn__menu
-          a href=""
+          a href="https://www.facebook.com/profile.php?id=100028298603236"
             i.fab.fa-facebook-f
       ul.header-list-nav.flex
         li.header-list-nav__menu
-          a href="#home" Home
+          a href="#" Home
         li.header-list-nav__menu
           a href="#about" About
         li.header-list-nav__menu
           a href="#work" Work
         li.header-list-nav__menu
-          a href="#blog" Blog
+          a href="#hobby" Hobby
 
     .sp-header-list-wrapper.hidden-on-pc
       ul.sp-header-list-nav.flex
@@ -29,18 +29,55 @@ header.header#header
         li.sp-header-list-nav__menu
           a href="#work" Work
         li.sp-header-list-nav__menu
-          a href="#blog" Blog
+          a href="#hobby" Hobby
       ul.sp-social-btn.flex
         li.sp-social-btn__menu
-          a href=""
+          a href="https://www.instagram.com/m.k.224/?hl=ja"
             i.fab.fa-instagram
         li.sp-social-btn__menu
-          a href=""
+          a href="https://www.facebook.com/profile.php?id=100028298603236"
             i.fab.fa-facebook-f
 
 section.home
   .home__image
     =image_tag 'image02.jpg'
+
+section.about#about
+  h2.title
+    | About
+  .about-wrapper.flex
+    .about-image
+      =image_tag 'about3.jpg'
+
+    table.about-table
+      tbody
+        tr.about-table-row
+          td.about-table-row__title 名前:
+          td.about-table-row__text 日下正樹 (Kusaka Masaki)
+        tr.about-table-row
+          td.about-table-row__title 所在地:
+          td.about-table-row__text 東京都世田谷区下北沢
+        tr.about-table-row
+          td.about-table-row__title お問い合わせ:
+          td.about-table-row__text maaaaaki0224[at]gmail.com
+        tr.about-table-row
+          td.about-table-row__title 事業内容:
+          td.about-table-row__text HTML,CSSコーディング
+        tr.about-table-row
+          td.about-table-row__title Facebook:
+          td.about-table-row__text maaaaaki0224
+        tr.about-table-row
+          td.about-table-row__title Instagram
+          td.about-table-row__text m.k.224
+  .about-history
+    p.about-history__text
+      | 2018年7月、東京に来て本格的にプログラミングを始める
+    p.about-history__text
+      | 2018年3月、二度目の大学受験をして失敗
+    p.about-history__text
+      | 2017年4月、浪人生活を始める
+    p.about-history__text
+      | 2017年2月、大学受験をして失敗
 
 section.service
   h2.title
@@ -55,46 +92,51 @@ section.service
         i.fas.fa-code-branch
       p.service-list-menu__text
         |デザインの意図を理解し、動きや効果を適切に使用することでWebサイトの仕上がりは大きく変わります。スマートフォンサイト、ワードプレスを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイトなど、様々なサイトのコーディングを行っております。
-    li.service-list-menu
-      h3.service-list-menu__title
-        |ディレクション
-      h4.service-list-menu__subtitle
-        | DIRECTION
-      .service-list-menu__img
-        i.fas.fa-pencil-alt
-      p.service-list-menu__text
-        |お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
 
-section.work
+section.work#work
   h2.title
     | Works
   ul.work-list.flex
-    li.work-list__menu
+    li.work-list__image
       a href="#"
-        img src="https://s3.ap-northeast-1.amazonaws.com/i-repo/element/82b26402-e7e8-4e6d-814d-ecee2131ba84.jpg"
-    li.work-list__menu
-      a href="#"
-        img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/121508/9f8ecad0a774c7cb6470cc4436557d28_7ed9c622873fe99debf578c697707c8a.jpg?width=588"
-    li.work-list__menu
-      a href="#"
-        img src="http://jiyuubito21102.com/wp-content/uploads/2018/05/hamabeminami.jpg.pagespeed.ce.ZL7xHaOTtB.jpg"
+        =image_tag 'goround1.png'
+        .mask.hidden-on-sp
+          .mask-wrapper
+            .mask-wrapper__name
+              |「Go Round」
+            .mask-wrapper__text
+              | HTML部分を書きました
 
-section.hobby
+    p.work-list__text.hidden-on-pc
+      |「Go Round」
+      br
+      |HTML部分を書きました
+
+section.hobby#hobby
   h2.title
     | Hobby
   ul.hobby-list.flex
-    li.hobby-list__menu
-      a href=""
-        img src="https://cdn.images-dot.com/S2000/upload/2016092700249_2.jpg?update=20160927164102"
-    li.hobby-list__menu
-      a href=""
-        img src="https://cdn-ak.f.st-hatena.com/images/fotolife/p/poison3rd/20150109/20150109133937.jpg"
-    li.hobby-list__menu
-      a href=""
-        img src="https://1.bp.blogspot.com/--_DVC0tlO9w/WOmylD-7zyI/AAAAAAAAuMA/z8d_GFKHGhwTdad4x8RB83hIvKqdVyeogCLcB/s1600/IMG_2249_mini.JPG"
+    li.hobby-list-menu
+      img src="https://cdn.images-dot.com/S2000/upload/2016092700249_2.jpg?update=20160927164102"
+      .mask.hidden-on-sp
+        .mask-wrapper
+            |体を動かすこと(特にバスケ)
+    p.hobby-list-menu__text.hidden-on-pc 体を動かすこと（特にバスケ）
+    li.hobby-list-menu
+      img src="https://cdn-ak.f.st-hatena.com/images/fotolife/p/poison3rd/20150109/20150109133937.jpg"
+      .mask.hidden-on-sp
+        .mask-wrapper
+            |アニメ鑑賞
+    p.hobby-list-menu__text.hidden-on-pc アニメ鑑賞
+    li.hobby-list-menu
+      img src="https://1.bp.blogspot.com/--_DVC0tlO9w/WOmylD-7zyI/AAAAAAAAuMA/z8d_GFKHGhwTdad4x8RB83hIvKqdVyeogCLcB/s1600/IMG_2249_mini.JPG"
+      .mask.hidden-on-sp
+        .mask-wrapper
+            |古着屋巡り(下北あたり)
+    p.hobby-list-menu__text.hidden-on-pc 古着屋巡り(下北あたり)
 
 .toTop
-  a href="#header"
+  a href="#"
     i.fas.fa-caret-up
 
 
@@ -102,12 +144,12 @@ footer.footer
   .footer-wrapper.flex
     ul.footer-list.flex
       li.footer-list__menu
-        a href="#home" Home
+        a href="#" Home
       li.footer-list__menu
         a href="#about" About
       li.footer-list__menu
         a href="#work" Work
       li.footer-list__menu
-        a href="#blog" Blog
+        a href="#hobby" Hobby
     .copyright
-      | Self Introduction
+      | Kusaka Masaki
