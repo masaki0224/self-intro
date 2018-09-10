@@ -128,19 +128,23 @@ $tablet-width: 768px;
   margin-bottom: 75px;
   justify-content: flex-end;
   &__menu{
-    padding-right: 40px;
+    margin-right: 40px;
   }
   &__menu:last-child{
-    padding-right: 0;
+    margin-right: 0;
   }
 }
 .header-list-nav{
   font-size: 17px;
   &__menu{
-    padding-right: 40px;
+    margin-right: 40px;
+    &:hover{
+      color: #6f6f6f;
+      border-bottom: solid 1px #6f6f6f;
+    }
   }
   &__menu:last-child{
-    padding-right: 0;
+    margin-right: 0;
   }
 }
 .sp-header-list-nav{
@@ -150,15 +154,23 @@ $tablet-width: 768px;
     width: 50%;
     box-sizing: border-box;
     border: solid 1px #6f6f6f;
+    border-left: none;
     padding: 15px;
     text-align: center;
+    margin-top: -1px;
+  }
+  &__menu:nth-of-type(even){
+    border-right: none;
   }
 }
 .sp-social-btn{
   justify-content: center;
   font-size: 20px;
   &__menu{
-    padding-right: 15px;
+    padding-right: 25px;
+    &:last-child{
+      padding-right: 0;
+    }
   }
 }
 /*============================================================
@@ -192,6 +204,57 @@ $tablet-width: 768px;
   }
 }
 /*============================================================
+    about
+=============================================================*/
+.about{
+  max-width: 800px;
+  margin-bottom: 75px;
+  margin: auto;
+  padding: 0 200px;
+  @media screen and (max-width: $tablet-width){
+    padding: 0;
+    .flex{
+      @media screen and (max-width: $tablet-width){
+        display: block;
+      }
+    }
+  }
+  &-image{
+    @media screen and (max-width: $tablet-width){
+      display: block;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  img{
+    width: 300px;
+    height: 225px;
+  }
+  &-table-row{
+    &__title{
+      padding: 0 25px 25px 50px;
+      font-size: 14px;
+    }
+    &____title:first-child{
+      padding-top: 0;
+    }
+  }
+}
+
+.about-history{
+  &__text{
+    font-size: 14px;
+    padding-top: 10px;
+    letter-spacing: 3px;
+    line-height: 2;
+    @media screen and (max-width: $tablet-width){
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/*============================================================
     service
 =============================================================*/
 .service{
@@ -205,7 +268,7 @@ $tablet-width: 768px;
   }
 }
 .service-list-menu{
-  width: 50%;
+  width: 100%;
   @media screen and (max-width: $tablet-width){
     width: 100%;
     margin-bottom: 40px;
@@ -228,10 +291,13 @@ $tablet-width: 768px;
   }
   &__text{
     font-size: 14px;
-    max-width: 300px;
+    max-width: 500px;
     margin: 0 auto;
     letter-spacing: 3px;
     line-height: 2;
+    @media screen and (max-width: $tablet-width){
+      max-width: 300px;
+    }
   }
 }
 
@@ -251,19 +317,18 @@ $tablet-width: 768px;
 }
 .work-list{
   padding: 25px;
-  &__menu{
+  &__image{
     width: 33.33%;
     position: relative;
-    height: 200px;
+    height: 275px;
     overflow: hidden;
     margin-right: 10px;
   &:last-child{
     margin-right: 0;
   }
-    @media screen and (max-width: $tablet-width){
-      width: 100%;
-      margin-bottom: 10px;
-    }
+  @media screen and (max-width: $tablet-width){
+    width: 100%
+  }
     img{
       position: absolute;
       top: 70%;
@@ -271,7 +336,39 @@ $tablet-width: 768px;
       transform: translate(-50%,-50%);
     }
   }
+
+  &__text{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
+.work-list__image .mask-wrapper{
+  text-align: center;
+  line-height: 2;
+  color: #fff;
+  font-size: 20px;
+}
+.work-list__image .mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color:	rgba(0,0,0,0.4);
+}
+.work-list__image:hover .mask{
+  opacity: 1;
+}
+.mask-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
 /*============================================================
     hobby
 =============================================================*/
@@ -291,14 +388,14 @@ $tablet-width: 768px;
 }
 .hobby-list{
   padding: 25px;
-  &__menu{
+  &-menu{
     width: 33.33%;
     position: relative;
     height: 200px;
     overflow: hidden;
+    margin-right: 10px;
     @media screen and (max-width: $tablet-width){
       width: 100%;
-      margin-bottom: 10px;
     }
     img{
       position: absolute;
@@ -306,7 +403,40 @@ $tablet-width: 768px;
       left: 50%;
       transform: translate(-50%,-50%);
     }
+    &__text{
+      @media screen and (max-width: $tablet-width){
+        font-size: 14px;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 25px;
+      }
+    }
   }
+}
+.hobby-list-menu .mask-wrapper{
+  text-align: center;
+  line-height: 2;
+  color: #fff;
+  font-size: 20px;
+}
+.hobby-list-menu .mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color:	rgba(0,0,0,0.4);
+}
+.hobby-list-menu:hover .mask{
+  opacity: 1;
+}
+.mask-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
 }
 
 /*============================================================
@@ -345,13 +475,24 @@ $tablet-width: 768px;
     flex-wrap: wrap;
   }
   &__menu{
-    padding-right: 40px;
+    margin-right: 40px;
+    &:hover{
+      color: #6f6f6f;
+      border-bottom: solid 1px #6f6f6f;
+    }
     @media screen and (max-width: $tablet-width){
+      font-size: 12px;
+      margin-right: 0;
+      margin-top: -1px;
       width: 50%;
       box-sizing: border-box;
       border: solid 1px #6f6f6f;
+      border-left: none;
       padding: 15px;
       text-align: center;
+      &:nth-of-type(even){
+        border-right: none;
+      }
     }
   }
 }
@@ -360,6 +501,7 @@ $tablet-width: 768px;
   margin-left: auto;
   @media screen and (max-width: $tablet-width){
     text-align: center;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: $tablet-width){
